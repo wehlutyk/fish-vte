@@ -1,3 +1,3 @@
 function __vte_urlencode --argument-names str --description="encodes url byte-by-byte"
-  perl6 -MURI::Encode -e "say uri_encode($PWD)"
+  perl -e "use URI::Escape::XS qw(uri_encode); print uri_encode('$PWD')"
 end
